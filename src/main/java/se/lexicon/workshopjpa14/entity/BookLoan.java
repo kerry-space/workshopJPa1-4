@@ -19,8 +19,10 @@ public class BookLoan {
     private boolean returned;
 
 
+    @ManyToOne
     private AppUser borrower;
 
+    @ManyToOne
     private Book book;
 
     //constructor

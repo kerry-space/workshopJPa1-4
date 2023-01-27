@@ -17,7 +17,7 @@ public class AppUser {
     private  String password;
     private LocalDate regDate;
 
-    @OneToOne
+    @OneToOne(cascade = {CascadeType.PERSIST,CascadeType.REMOVE,CascadeType.MERGE,CascadeType.REFRESH,CascadeType.DETACH})
     private Details details;
 
     //constructor

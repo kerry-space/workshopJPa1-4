@@ -48,6 +48,7 @@ public class DetailsDaoImpl implements DetailsDao {
     }
 
     @Override
+    @Transactional
     public void delete(int id) throws ExceptionHandling{
         if(id == 0)throw new IllegalArgumentException("The id was not found!");
         Details details = entityManager.find(Details.class, id);
